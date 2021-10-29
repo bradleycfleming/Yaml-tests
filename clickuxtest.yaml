@@ -1,0 +1,17 @@
+# EnableClipFab test
+settings:
+  name: clickuxtest
+  description: "Use the clickux command"
+  classname: L1
+  suite: clickux
+  file: clickuxtest.yaml
+  exclusions:
+calls:
+- command: GVCLoadModel
+  input:
+    - model:
+      - UtilityTestModel
+      - https://argo.hexagonppm.com/graphicsamples/utility/
+      - parametrics
+      - file
+- command: clickux #click the Clip icon button
