@@ -14,12 +14,15 @@ calls:
       - parametrics
       - file
 # Test
-- command: ToggleMeasure
+# - command: ToggleMeasure
+#   input:
+#     - true
+#   validation:
+#     - command: GetMeasurePointPlacementMode
+#       expected: true
+- command: clickux #click the Clip icon button
   input:
-    - true
-  validation:
-    - command: GetMeasurePointPlacementMode
-      expected: true
+    identifier: "Measure-id-visualization-toolbar"
 - command: clickux #click the Clip icon button
   input:
     identifier: "Measure-id-fab-toolbar"
