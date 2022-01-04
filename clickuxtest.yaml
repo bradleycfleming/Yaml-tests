@@ -30,4 +30,4 @@ calls:
     expected: true
 - command: clickux #click the Clip icon button
   input:
-    identifier: "Measure-id-fab-toolbar"
+    identifier: "Place-Point-id-measure-fab-toolbar"
