@@ -38,5 +38,5 @@ calls:
   validation: 
   - command: getuxselected #check if the icon button is selected
     input: 
-      identifier: "Place-Point-id-visualization-toolbar"
+      identifier: "Place-Point-id-measure-fab-toolbar"
     expected: false
