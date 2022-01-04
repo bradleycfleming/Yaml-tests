@@ -27,7 +27,16 @@ calls:
   - command: getuxselected #check if the icon button is selected
     input: 
       identifier: "Measure-id-visualization-toolbar"
+    expected: true 
+  - command: getuxdisabled #check if the icon button is selected
+    input: 
+      identifier: "Trash-id-measure-fab-toolbar"
     expected: true
 - command: clickux #click the Clip icon button
   input:
     identifier: "Place-Point-id-measure-fab-toolbar"
+  validation: 
+  - command: getuxselected #check if the icon button is selected
+    input: 
+      identifier: "Measure-id-visualization-toolbar"
+    expected: true
