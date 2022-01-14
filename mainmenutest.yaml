@@ -18,6 +18,9 @@ calls:
     identifier: "Menu-id-visualization-toolbar"
 - command: clickux #click the Clip icon button
   input:
+    identifier: "settings-id-main-menu"
+- command: clickux #click the Clip icon button
+  input:
     identifier: "clip-id-main-menu"
 #   validation: 
 #   - command: getuxselected #check if the icon button is selected
