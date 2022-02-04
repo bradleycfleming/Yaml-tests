@@ -20,6 +20,9 @@ calls:
 #   validation:
 #     - command: GetMeasurePointPlacementMode
 #       expected: true
+- command: clickux #click the Clip icon button
+  input:
+    identifier: "Measure-id-visualization-toolbar"
 - command: MCDSelect
   input:
   - 59 # render id of object to select
