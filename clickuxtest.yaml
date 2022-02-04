@@ -20,27 +20,28 @@ calls:
 #   validation:
 #     - command: GetMeasurePointPlacementMode
 #       expected: true
-- command: clickux #click the Clip icon button
+- command: MCDSelect
   input:
-    identifier: "Measure-id-visualization-toolbar"
+  - 59 # render id of object to select
+  - false # we aren't selecting multiple objects so we don't need multiselect
   validation: 
   - command: getuxselected #check if the icon button is selected
     input: 
-      identifier: "Measure-id-visualization-toolbar"
+      identifier: "Isolate-id-properties-card"
+    expected: false 
+- command: clickux #click the Clip icon button
+  input:
+    identifier: "Isolate-id-properties-card"
+  validation: 
+  - command: getuxselected #check if the icon button is selected
+    input: 
+      identifier: "Isolate-id-properties-card"
     expected: true 
-  - command: getuxdisabled #check if the icon button is selected
-    input: 
-      identifier: "Trash-id-measure-fab-toolbar"
-    expected: true
-  - command: getfabexists #check if the icon button is selected
-    input: 
-      identifier: "Measure-id-fab-toolbar"
-    expected: true
 - command: clickux #click the Clip icon button
   input:
-    identifier: "Place-Point-id-measure-fab-toolbar"
+    identifier: "Open-id-properties-card"
   validation: 
   - command: getuxselected #check if the icon button is selected
     input: 
-      identifier: "Place-Point-id-measure-fab-toolbar"
-    expected: false
+      identifier: "Open-id-properties-card"
+    expected: true 
