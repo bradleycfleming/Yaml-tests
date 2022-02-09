@@ -43,8 +43,6 @@ calls:
 - command: clickux #click the Clip icon button
   input:
     identifier: "Open-id-properties-card"
-  validation: 
-  - command: getuxselected #check if the icon button is selected
-    input: 
-      identifier: "Open-id-properties-card"
-    expected: true 
+- command: clickux #click the Clip icon button
+  input:
+    identifier: "Close-id-properties-card"
