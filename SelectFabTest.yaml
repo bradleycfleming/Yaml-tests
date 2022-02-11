@@ -6,7 +6,6 @@ settings:
   suite: SelectFabToolbarTests
   file: SelectFabTest.yaml
   exclusions: 
-    - android
     - desktop
     - web
 calls:

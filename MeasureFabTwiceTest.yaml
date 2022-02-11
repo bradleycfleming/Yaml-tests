@@ -8,7 +8,6 @@ settings:
   suite: MeasureFabToolbarTests
   file: MeasureFabTwiceTest.yaml
   exclusions: 
-    - android
     - desktop
 calls:
 - command: GVCLoadModel

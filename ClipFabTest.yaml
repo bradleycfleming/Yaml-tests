@@ -6,7 +6,6 @@ settings:
   suite: ClipFabToolbarTests
   file: ClipFabTest.yaml
   exclusions: 
-    - android
     - desktop
 calls:
 - command: GVCLoadModel
