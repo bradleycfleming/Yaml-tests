@@ -7,7 +7,6 @@ settings:
   file: ClipFabTest.yaml
   exclusions: 
     - android
-    - ios
     - desktop
 calls:
 - command: GVCLoadModel

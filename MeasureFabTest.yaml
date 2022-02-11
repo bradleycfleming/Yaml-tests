@@ -7,7 +7,6 @@ settings:
   file: MeasureFabTest.yaml
   exclusions: 
     - android
-    - ios
     - desktop
 calls:
 - command: GVCLoadModel

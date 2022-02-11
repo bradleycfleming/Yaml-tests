@@ -7,7 +7,6 @@ settings:
   file: SelectFabTest.yaml
   exclusions: 
     - android
-    - ios
     - desktop
     - web
 calls:
