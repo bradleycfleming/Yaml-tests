@@ -27,18 +27,6 @@ calls:
     input: 
       identifier: "Clip-id-fab-toolbar"
     expected: true
-  - command: getfabexists #check if the Invert button exists
-    input: 
-      identifier: "Invert-id-Clip-fab-toolbar"
-    expected: true
-  - command: getfabexists #check if the Delete Plane button exists
-    input: 
-      identifier: "Delete Plane-id-Clip-fab-toolbar"
-    expected: true
-  - command: getfabexists #check if the Reset button exists
-    input: 
-      identifier: "Reset-id-Clip-fab-toolbar"
-    expected: true
 - command: clickux #click the Clip toolbar button to close the toolbar
   input:
     identifier: "Clip-id-fab-toolbar"
