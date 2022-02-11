@@ -1,0 +1,29 @@
+# Sample test
+settings:
+  name: SampleTest
+  description: "Sample Test"
+  classname: L1
+  suite: SampleTests
+  file: SampleTest.yaml
+  exclusions: 
+    - android
+    - ios
+calls:
+- command: GVCLoadModel
+  input:
+    - model:
+      - UtilityTestModel
+      - https://argo.hexagonppm.com/graphicsamples/utility/
+      - parametrics
+      - file
+- command: clickux
+  input:
+    identifier: "Menu-id-visualization-toolbar"
+- command: clickux
+  input:
+    identifier: "Clip-id-main-menu"
+  validation:
+  - command: getuxselected 
+    input: 
+      identifier: "Clip-id-main-menu"
+    expected: true
