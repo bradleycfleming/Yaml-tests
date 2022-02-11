@@ -55,3 +55,19 @@ calls:
     input: 
       identifier: "Clip-id-fab-toolbar-fab"
     expected: false
+- command: clickux #click the Clip icon button to close the fab
+  input:
+    identifier: "Measure-id-visualization-toolbar"
+  validation: 
+  - command: getuxselected #check if the icon button is selected
+    input: 
+      identifier: "Clip-id-visualization-toolbar"
+    expected: false
+  - command: getfabexists #check if the Clip fab toolbar is open
+    input: 
+      identifier: "Clip-id-fab-toolbar"
+    expected: false
+  - command: getfabexists #check if the Clip fab toolbar fab is open
+    input: 
+      identifier: "Clip-id-fab-toolbar-fab"
+    expected: false
