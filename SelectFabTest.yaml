@@ -1,0 +1,80 @@
+# EnableFenceSelect test
+settings:
+  name: SelectFabTest
+  description: "Fence Select Fab Toolbar test"
+  classname: L1
+  suite: SelectFabToolbarTests
+  file: SelectFabTest.yaml
+  exclusions: 
+    - android
+    - ios
+    - desktop
+    - web
+calls:
+- command: GVCLoadModel
+  input:
+    - model:
+      - SDXQADemoGDS
+      - https://yetis-testbed.ingrnet.com/GDSWebAPI/gds/v1/Plants('SDX1606')/Queries('_DEBUG_Whole')/myVR(Aspect=0,Device=0)
+      - parametrics
+      - web-api
+- command: clickux #click the "Select" button in the menu
+  input:
+    identifier: "Select-id-main-menu"
+  validation: 
+  - command: getuxselected #check if the select icon button is selected
+    input: 
+      identifier: "Select-id-visualization-toolbar"
+    expected: true
+  - command: getfabexists #check if the Select fab toolbar is open
+    input: 
+      identifier: "Select-id-fab-toolbar"
+    expected: true
+  - command: getuxselected #check if the Fence Select button is selected on the Select fab toolbar
+    input: 
+      identifier: "Fence Select-id-Select-fab-toolbar"
+    expected: true
+  - command: getuxselected #check if the Inside Select button is selected on the Select fab toolbar
+    input: 
+      identifier: "Inside Select-id-Select-fab-toolbar"
+    expected: true
+  - command: getuxselected #check if the Overlap Select button is not selected on the Select fab toolbar
+    input: 
+      identifier: "Overlap Select-id-Select-fab-toolbar"
+    expected: false
+  - command: getfabexists #check if the Cancel button exists on the Select fab toolbar
+    input: 
+      identifier: "Cancel-id-Select-fab-toolbar"
+    expected: true
+  - command: getfabexists #check if the Divider exists on the Select fab toolbar
+    input: 
+      identifier: "Divider-id-Select-fab-toolbar"
+    expected: true
+- command: clickux #click the Select toolbar button to close the toolbar
+  input:
+    identifier: "Select-id-fab-toolbar"
+  validation: 
+  - command: getfabexists #check if the fab toolbar is open
+    input: 
+      identifier: "Select-id-fab-toolbar"
+    expected: false
+  - command: getfabexists #check if the fab toolbar fab exists
+    input: 
+      identifier: "Select-id-fab-toolbar-fab"
+    expected: true
+- command: clickux #click the Select icon button to close the fab
+  input:
+    identifier: "Select-id-visualization-toolbar"
+  validation: 
+  - command: getfabexists #check if the icon button exists
+    input: 
+      identifier: "Select-id-visualization-toolbar"
+    expected: false
+  - command: getfabexists #check if the Select fab toolbar is open
+    input: 
+      identifier: "Select-id-fab-toolbar"
+    expected: false
+  - command: getfabexists #check if the Select fab toolbar fab is open
+    input: 
+      identifier: "Select-id-fab-toolbar-fab"
+    expected: false

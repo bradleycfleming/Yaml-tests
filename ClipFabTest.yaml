@@ -1,0 +1,71 @@
+# EnableClipFab test
+settings:
+  name: ClipFabTest
+  description: "Clip Fab Toolbar test"
+  classname: L1
+  suite: ClipFabToolbarTests
+  file: ClipFabTest.yaml
+  exclusions: 
+    - android
+    - ios
+    - desktop
+calls:
+- command: GVCLoadModel
+  input:
+    - model:
+      - UtilityTestModel
+      - https://argo.hexagonppm.com/graphicsamples/utility/
+      - parametrics
+      - file
+- command: clickux #click the Clip icon button
+  input:
+    identifier: "Clip-id-visualization-toolbar"
+  validation: 
+  - command: getuxselected #check if the icon button is selected
+    input: 
+      identifier: "Clip-id-visualization-toolbar"
+    expected: true
+  - command: getfabexists #check if the Clip fab toolbar is open
+    input: 
+      identifier: "Clip-id-fab-toolbar"
+    expected: true
+  - command: getfabexists #check if the Invert button exists
+    input: 
+      identifier: "Invert-id-Clip-fab-toolbar"
+    expected: true
+  - command: getfabexists #check if the Delete Plane button exists
+    input: 
+      identifier: "Delete Plane-id-Clip-fab-toolbar"
+    expected: true
+  - command: getfabexists #check if the Reset button exists
+    input: 
+      identifier: "Reset-id-Clip-fab-toolbar"
+    expected: true
+- command: clickux #click the Clip toolbar button to close the toolbar
+  input:
+    identifier: "Clip-id-fab-toolbar"
+  validation: 
+  - command: getfabexists #check if the fab toolbar is open
+    input: 
+      identifier: "Clip-id-fab-toolbar"
+    expected: false
+  - command: getfabexists #check if the fab toolbar fab exists
+    input: 
+      identifier: "Clip-id-fab-toolbar-fab"
+    expected: true
+- command: clickux #click the Clip icon button to close the fab
+  input:
+    identifier: "Clip-id-visualization-toolbar"
+  validation: 
+  - command: getuxselected #check if the icon button is selected
+    input: 
+      identifier: "Clip-id-visualization-toolbar"
+    expected: false
+  - command: getfabexists #check if the Clip fab toolbar is open
+    input: 
+      identifier: "Clip-id-fab-toolbar"
+    expected: false
+  - command: getfabexists #check if the Clip fab toolbar fab is open
+    input: 
+      identifier: "Clip-id-fab-toolbar-fab"
+    expected: false
