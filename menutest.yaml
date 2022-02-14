@@ -6,8 +6,6 @@ settings:
   suite: SampleTests
   file: SampleTest.yaml
   exclusions: 
-    - android
-    - ios
 calls:
 - command: GVCLoadModel
   input:
