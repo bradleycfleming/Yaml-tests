@@ -20,33 +20,25 @@ calls:
         input:
           identifier: Measure-id-visualization-toolbar
         expected: true
-  - command: clickux
-    input:
-      identifier: Measure-id-visualization-toolbar
-    validation:
-      - command: getuxselected
-        input:
-          identifier: Measure-id-visualization-toolbar
-        expected: false
       - command: getuxdisabled
         input:
           identifier: Trash-id-measure-fab-toolbar
+        expected: true
+      - command: getuxselected
+        input:
+          identifier: Place_Point-id-measure-fab-toolbar
         expected: true
       - command: getfabexists
         input:
           identifier: Measure-id-fab-toolbar
         expected: true
-      - command: getuxselected
-        input:
-          identifier: Place Point-id-measure-fab-toolbar
-        expected: true
   - command: clickux
     input:
-      identifier: Place Point-id-measure-fab-toolbar
+      identifier: Place_Point-id-measure-fab-toolbar
     validation:
       - command: getuxselected
         input:
-          identifier: Place Point-id-measure-fab-toolbar
+          identifier: Place_Point-id-measure-fab-toolbar
         expected: false
   - command: clickux
     input:
