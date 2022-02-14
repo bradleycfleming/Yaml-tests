@@ -13,30 +13,22 @@ calls:
       - https://argo.hexagonppm.com/graphicsamples/utility/
       - parametrics
       - file
-- command: clickux #click the Clip icon button
-  input:
-    identifier: "Measure-id-visualization-toolbar"
-  validation: 
-  - command: getuxselected #check if the icon button is selected
-    input: 
-      identifier: "Measure-id-visualization-toolbar"
-    expected: true 
-- command: clickux #click the Clip icon button
-  input:
-    identifier: "Measure-id-visualization-toolbar"
-  validation: 
-  - command: getuxselected #check if the icon button is selected
-    input: 
-      identifier: "Measure-id-visualization-toolbar"
-    expected: false 
-- command: clickux #click the Clip icon button
-  input:
-    identifier: "Clip-id-visualization-toolbar"
-  validation: 
-  - command: getuxselected #check if the icon button is selected
-    input: 
-      identifier: "Clip-id-visualization-toolbar"
-    expected: true 
+# - command: clickux #click the Clip icon button
+#   input:
+#     identifier: "Measure-id-visualization-toolbar"
+#   validation: 
+#   - command: getuxselected #check if the icon button is selected
+#     input: 
+#       identifier: "Measure-id-visualization-toolbar"
+#     expected: true 
+# - command: clickux #click the Clip icon button
+#   input:
+#     identifier: "Measure-id-visualization-toolbar"
+#   validation: 
+#   - command: getuxselected #check if the icon button is selected
+#     input: 
+#       identifier: "Measure-id-visualization-toolbar"
+#     expected: false 
 - command: clickux #click the Clip icon button
   input:
     identifier: "Clip-id-visualization-toolbar"
@@ -44,23 +36,31 @@ calls:
   - command: getuxselected #check if the icon button is selected
     input: 
       identifier: "Clip-id-visualization-toolbar"
-    expected: false 
+    expected: true 
 - command: clickux #click the Clip icon button
   input:
-    identifier: "Fly-id-visualization-toolbar"
+    identifier: "Clip-id-visualization-toolbar"
   validation: 
   - command: getuxselected #check if the icon button is selected
     input: 
-      identifier: "Fly-id-visualization-toolbar"
-    expected: true 
-- command: clickux #click the Fly icon button
-  input:
-    identifier: "Fly-id-visualization-toolbar"
-  validation: 
-  - command: getuxselected #check if the icon button is selected
-    input: 
-      identifier: "Fly-id-visualization-toolbar"
+      identifier: "Clip-id-visualization-toolbar"
     expected: false 
+# - command: clickux #click the Clip icon button
+#   input:
+#     identifier: "Fly-id-visualization-toolbar"
+#   validation: 
+#   - command: getuxselected #check if the icon button is selected
+#     input: 
+#       identifier: "Fly-id-visualization-toolbar"
+#     expected: true 
+# - command: clickux #click the Fly icon button
+#   input:
+#     identifier: "Fly-id-visualization-toolbar"
+#   validation: 
+#   - command: getuxselected #check if the icon button is selected
+#     input: 
+#       identifier: "Fly-id-visualization-toolbar"
+#     expected: false 
 #   - command: getuxdisabled #check if the icon button is selected
 #     input: 
 #       identifier: "Trash-id-measure-fab-toolbar"
