@@ -12,6 +12,7 @@ calls:
           - 'https://argo.hexagonppm.com/graphicsamples/utility/'
           - parametrics
           - file
+# testing a visualization toolbar button
   - command: clickux
     input:
       identifier: Measure-id-visualization-toolbar
@@ -24,6 +25,7 @@ calls:
         input:
           identifier: Measure-id-fab-toolbar
         expected: true
+# testing a fab toolbar content button
   - command: clickux
     input:
       identifier: Hide-id-measure-fab-toolbar
@@ -32,6 +34,7 @@ calls:
         input:
           identifier: Hide-id-measure-fab-toolbar
         expected: true
+# testing the fab toolbar
   - command: clickux
     input:
       identifier: Measure-id-fab-toolbar
@@ -40,6 +43,11 @@ calls:
         input:
           identifier: Measure-id-fab-toolbar
         expected: false
+      - command: getfabexists
+        input:
+          identifier: Measure-id-fab-toolbar-fab
+        expected: true
+# testing that the fab toolbar will close
   - command: clickux
     input:
       identifier: Measure-id-visualization-toolbar
@@ -47,4 +55,12 @@ calls:
       - command: getuxselected
         input:
           identifier: Measure-id-visualization-toolbar
+        expected: false
+      - command: getfabexists
+        input:
+          identifier: Measure-id-fab-toolbar-fab
+        expected: false
+      - command: getfabexists
+        input:
+          identifier: Measure-id-fab-toolbar
         expected: false
